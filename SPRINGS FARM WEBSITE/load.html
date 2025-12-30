@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/index.css">
+<script src="index.js" defer></script>
+<link rel="icon" href="/logo1.png" type="png">
+<title>Springs Farm</title>
+</head>
+<body>
+  <!-- TOP SOCIAL BAR -->
+<div class="top-social-bar">
+  <div class="social-container">
+    <a href="https://www.facebook.com/profile.php?id=61585303436057" target="_blank"><img src="Facebook.png" alt="Facebbook" style="height: 25px;"></a>
+    <a href="https://www.instagram.com/springsfarmng?igsh=MWhjZzR6YmUzZjNvNQ==" target="_blank"><img src="Instagram.png" alt="Instagram" style="height: 25px;"></a>
+    <a href="https://www.linkedin.com/in/springs-farmng-7989163a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="Linkedln.png" alt="Linkedln" style="height: 20px;"></a>
+    <a href="https://www.tiktok.com/@springsfarm?_r=1&_t=ZS-92NKNJ78U4H" target="_blank"><img src="Tiktok.png" alt="Tiktok" style="height: 25px;"></a>
+  </div>
+</div>
+<!-- <div id="authPopup" class="auth-popup">
+  <div class="auth-box">
+    <span class="close-btn" onclick="closeAuth()">×</span>
+
+    <h2>Welcome Back</h2>
+    <p>Please login or sign up to continue</p>
+
+    <input type="email" placeholder="Email address">
+    <input type="password" placeholder="Password">
+
+    <button onclick="loginUser(login.html)">Login</button>
+
+    <p class="or">OR</p>
+
+    <button class="signup" onclick="loginUser(signup.html)">Sign Up</button>
+
+    <small>Secured with EFCC • Mansard</small>
+  </div>-->
+</div>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6951fb90338104197aeb4b2f/1jdk3tbtd';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<header id="main-header" class="navbar" style="background-color: green;">
+  <!-- LOGO -->
+  <div class="logo"><img src="logo1.png" alt="logo" style="height: 30px; color: white;"> SpringsFarm</div>
+
+  <!-- DESKTOP LINKS -->
+  <nav class="desktop-menu">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#vision-mission">Vision</a>
+    <a href="#contact">Contact</a>
+    <a href="/dashboard.html">Dashboard</a>
+     <a href="javascript:void(0)" onclick="handleInvestmentClick()">Investment</a>
+  </nav>
+
+  <!-- AUTH BUTTONS (DESKTOP) 
+  <div id="auth-buttons">
+    <a href="login.html" class="btn">Login</a>
+    <a href="signup.html" class="btn-btn-primary">Sign Up</a>
+  </div>-->
+
+  <!-- HAMBURGER (MOBILE) -->
+  <button class="openbtn" onclick="openNav()">☰</button>
+</header>
+
+<!-- MOBILE SIDE PANEL -->
+<div id="mobileMenu" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+ <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#vision-mission">Vision</a>
+    <a href="#contact">Contact</a>
+    <a href="/dashboard.html">Dashboard</a>
+     <a href="javascript:void(0)" onclick="handleInvestmentClick()">Investment</a>
+</div>
+</div>
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+  <style>
+    .typing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+    }
+</style>
+  <div class="typing-overlay">
+  <h1 style="font-size: 50px;">
+    Growing Wealth Through
+    <span id="typing-text"></span>
+  </h1>
+</div>
+
+  <div class="slide active">
+    <img src="Plantation 1.jpg" alt="Palm oil fruit">
+    <!--<div class="caption">Palm Oil Fruit Close Up</div> -->
+  </div>
+  <div class="slide">
+    <img src="Plantation 2.jpg" alt="Palm oil plantation">
+    <!--<div class="caption">Oil Palm Plantation</div> -->
+  </div>
+  
+  <div class="slide">
+    <img src="Plantation 3.jpg" alt="Harvested palm fruit">
+  </div>
+  <div class="slide">
+    <img src="Plantation 1.jpg" alt="Harvested palm fruit">
+  </div>
+  <div class="slide">
+    <img src="Plantation 5.jpg" alt="Harvested palm fruit">
+  </div>
+  </div>
+  
+  <!-- <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+  <div class="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>-->
+
+  
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-container cf-scroll">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        SpringsFarm.ng Ltd. Springs Farms is an indigenous agricultural business based
+        in Edo State, our branches spreads across 6 state in Nigeria as our influence covers the boarders of Africa. We are producers of Palm Oil (PMO) and Palm Kernel Oil (PKO).
+      </p>
+       <a href="admin-dashboard.html"><button class="about-btn">INVEST WITH US</button></a>
+    </div>
+    <div class="about-image">
+      <img src="palm_oil_plantation.jpg" alt="Palm oil plantation">
+    </div>
+  </div>
+</section>
+<!-- PLACE THIS WHERE YOU WANT THE TEXT -->
+
+
+<script>
+
+</script>
+
+<style>
+#typing-text {
+  color: white;
+  font-weight: bold;
+  border-right: 2px solid #0b6623;
+  padding-right: 5px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #0b6623; }
+  100% { border-color: transparent; }
+}
+</style>
+<!-- VISION & MISSION SECTION -->
+<section id="vision-mission" class="vm-section">
+  <div class="vm-container vm-scroll-animate">
+    <div class="vm-card">
+      <h3>Our Vision</h3>
+      <p>
+        At SpringsFarm.ng Ltd, our Vision is to be a key player
+        in palm oil and palm kernel oil production, renowned for
+        environmental excellence, social responsibility, and
+        customer satisfaction, while promoting innovation and
+        industrialization locally and globally.
+      </p>
+    </div>
+    <div class="vm-card">
+      <h3>Our Mission</h3>
+      <p>
+        At SpringsFarm.ng Ltd, our mission is to provide quality unadulterated products
+        and services to all our customers and partners globally,
+        sustaining economic progression, innovation, and
+        industrialization.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL SECTION -->
+<section class="testimonial-section" style="background: green">
+  <h2 class="testimonial-title tm-scroll">What Our Clients Say</h2>
+  <div class="testimonial-container tm-scroll">
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “The quality of palm oil we receive is consistently excellent. Their
+        sustainability practices are truly commendable.”
+      </p>
+      <div class="testimonial-stars">★★★★★</div>
+      <h4 class="testimonial-name">— Adewale Johnson</h4>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Reliable supply, great customer service, and premium products.
+        We trust them completely.”
+      </p>
+      <div class="testimonial-stars">★★★★★</div>
+      <h4 class="testimonial-name">— Grace Okafor</h4>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Their palm oil meets international standards and has improved
+        the quality of our products.”
+      </p>
+      <div class="testimonial-stars">★★★★☆</div>
+      <h4 class="testimonial-name">— Samuel Musa</h4>
+    </div>
+  </div>
+</section>
+
+
+<section class="news-section" id="news">
+  <div class="news-header">
+    <h2>Latest News & Updates</h2>
+    <p>Stay informed on our investments, harvests, and partnerships</p>
+  </div>
+
+  <div class="news-grid">
+    
+    <article class="news-card">
+      <span class="news-tag">Investment</span>
+      <h3>New Palm Oil Investment Plan Launched</h3>
+      <p>
+        Springs Farm introduces flexible investment plans designed to
+        empower investors and boost agricultural production.
+      </p>
+      <div class="news-footer">
+        <span>📅 Jan 2026</span>
+        <a href="#">Read More →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <span class="news-tag green">Harvest</span>
+      <h3>Successful Palm Fruit Harvest Across 6 States</h3>
+      <p>
+        Our latest harvest records increased yield as a result of improved
+        sustainable farming techniques.
+      </p>
+      <div class="news-footer">
+        <span>📅 Feb 2026</span>
+        <a href="#">Read More →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <span class="news-tag gold">Security</span>
+      <h3>Platform Security & Compliance Update</h3>
+      <p>
+        Springs Farm reinforces investor protection through strengthened
+        compliance and monitoring systems.
+      </p>
+      <div class="news-footer">
+        <span>📅 Mar 2026</span>
+        <a href="#">Read More →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+<section class="merchant-benefits" style="background: yellow;">
+  <h2>Become a Merchant (Join our team) </h2>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <span>🤝</span>
+      <h4>Clientele Access</h4>
+      <p>
+        Approved merchants gain direct access to our established
+        clientele base for retail palm oil supply.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <span>🌍</span>
+      <h4>Professional Network</h4>
+      <p>
+        Become part of a trusted community of experienced
+        agricultural and business professionals.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <span>🎁</span>
+      <h4>Free Starter Supply</h4>
+      <p>
+        Receive <strong>10 gallons (1 unit)</strong> of palm oil
+        upon approval and pay after <strong>3 weeks</strong>.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <span>💰</span>
+      <h4>Subsidized Pricing</h4>
+      <p>
+        Enjoy continuous access to palm oil at
+        <strong>subsidized wholesale prices</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- GOOGLE MAP -->
+<div style="width:100%; max-width:100%;">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63595.91755305449!2d6.269991987911028!3d4.982009627554048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106a01a8ef311659%3A0x1babfaddabe3f24a!2sAgudama%20Epie%20Market!5e0!3m2!1sen!2sng!4v1766014450862!5m2!1sen!2sng"
+    style="width:100%; height:300px; border:0;"
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-container cf-scroll">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have questions or want to partner with us? Reach out and our team will respond promptly.</p>
+      <div class="contact-details">
+        <div>📍 Location: Nigeria</div>
+        <div>📞 Phone: +(234) 7035265128 / 7060744345</div>
+        <div>✉ Email: SpringsFarmng1@gmail.com</div>
+      </div>
+    </div>
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<section class="security-partner">
+  <div class="security-content">
+    <div class="security-text">
+      <h2>Secured & Powered by AXA Mansard</h2>
+      <p>
+        Springs Farm Partners with <strong> AXA Mansard Insurance Company Plc</strong> to ensure
+        security for all  our goods in transit hence minimising the possibility of Risk, Accident or Hazard. 
+      </p>
+
+      <ul class="security-list">
+        <li>🔒 Promotes Transparency and Reliability</li>
+        <li>📜 Compliance & Risk Management</li>
+        <li>⚡ Fast & Reliable Fund Settlement</li>
+      </ul>
+    </div>
+
+    <div class="security-badge">
+      <img src="manxard.png" alt="Manxard Security Partner">
+      <span>Ensures Security for all our Goods</span>
+    </div>
+  </div>
+</section>
+<!-- EFCC PARTNERSHIP / SECURITY SECTION -->
+<section class="efcc-section">
+  <div class="efcc-overlay"></div>
+
+  <div class="efcc-container">
+    <div class="efcc-badge">
+      <img src="efcc.png" alt="EFCC Logo">
+    </div>
+
+    <div class="efcc-content">
+      <h2>Secured & Regulated Platform</h2>
+      <p>
+        Springs Farm operates with transparency, accountability, and strict
+        compliance with Nigerian financial regulations.
+      </p>
+
+      <div class="efcc-points">
+        <div class="efcc-point">
+          <span>✔</span>
+          <p>Monitored financial activities</p>
+        </div>
+        <div class="efcc-point">
+          <span>✔</span>
+          <p>Fraud prevention & investor protection</p>
+        </div>
+        <div class="efcc-point">
+          <span>✔</span>
+          <p>Verified merchants & traceable investments</p>
+        </div>
+        <div class="efcc-point">
+          <span>✔</span>
+          <p>Compliance with Nigerian financial laws</p>
+        </div>
+      </div>
+
+      <div class="efcc-note">
+        <strong>Note:</strong> OUR INVESTMENT HAS LOW MARKET RISK AS OUR INSURANCE PLANS COVERS 80% OF RISK
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* =====================
+   EFCC SECURITY SECTION
+===================== */
+.efcc-section {
+  position: relative;
+  padding: 90px 20px;
+  background: url("palm_oil_plantation.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.efcc-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.efcc-container {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+  z-index: 1;
+}
+
+.efcc-badge {
+  text-align: center;
+}
+
+.efcc-badge img {
+  width: 160px;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+}
+
+.efcc-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.efcc-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.efcc-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.efcc-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.efcc-point span {
+  color: #00ff7f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.efcc-note {
+  background: rgba(255, 215, 0, 0.15);
+  border-left: 4px solid #ffd700;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .efcc-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .efcc-points {
+    grid-template-columns: 1fr;
+  }
+
+  .efcc-content h2 {
+    font-size: 28px;
+  }
+}
+</style>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container cf-scroll">
+    <div>
+      <h4>About Us</h4>
+      <p>Producers of Palm Oil (PMO) and Palm Kernel Oil (PKO).</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#vision-mission">Vision & Mission</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#">Smart Agricultural Investments</a>
+      <a href="#">Verified Merchant Onboarding</a>
+      <a href="#">Secure Commodity Distribution</a>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <a href="https://www.facebook.com/profile.php?id=61585303436057"><img src="Facebook.png" alt="Facebbook" style="height: 25px;"></a>
+      <a href="https://www.instagram.com/springsfarmng?igsh=MWhjZzR6YmUzZjNvNQ=="><img src="Instagram.png" alt="Instagram" style="height: 25px;"></a>
+      <a href="https://www.linkedin.com/in/springs-farmng-7989163a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="Linkedln.png" alt="Linkedln" style="height: 20px;"></a>
+      <a href="https://www.tiktok.com/@springsfarm?_r=1&_t=ZS-92NKNJ78U4H"><img src="Tiktok.png" alt="Tiktok" style="height: 25px;"></a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Palm Oil Company. All rights reserved.</div>
+</footer>
+
+<!-- LOADING SPINNER -->
+<div id="loading-spinner">
+  <div class="spinner"></div>
+  <p>Sending message...</p>
+</div>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("S6TruRXKgiZ6qS6u9");
+})();
+</script>
+
+
+
+</body>
+</html>
