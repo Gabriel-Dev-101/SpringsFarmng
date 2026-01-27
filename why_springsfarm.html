@@ -6,6 +6,19 @@
   <title>Why SpringsFarmng</title>
 
   <style>
+    html, body {
+  height: 100%;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
     :root {
       --green: #0f3d2e;
       --light: #f7f6f2;
@@ -155,19 +168,193 @@
         font-size: 2.2rem;
       }
     }
-  </style>
+    .hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;   /* Full screen */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 61, 46, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .hero-slider {
+    height: 100svh;
+  }
+}
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100svh; /* mobile-safe viewport */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 61, 46, 0.65);
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  max-width: 720px;
+  opacity: 0.95;
+}
+.benefits-section {
+  padding: 100px 8%;
+  text-align: center;
+  color: black;
+}
+
+.benefits-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  padding: 28px 24px;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Built From the Soil. Designed for the Long Term.</h1>
-    <p>
-      SpringsFarmng is more than agriculture — it is a structured system built
+  <section class="hero-slider">
+  <div class="slides">
+    <div class="slide active" style="background-image:url('farm1.jpg')"></div>
+    <div class="slide" style="background-image:url('farm2.jpg')"></div>
+    <div class="slide" style="background-image:url('palm-farm.jpg')"></div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Built From the Soil. <br>Designed for Posterity.</h1>
+    <p style="color: white;">
+      SpringsFarmng is more than agriculture; it is a structured system built
       on real production, consistent demand, and patient growth.
     </p>
-  </section>
+  </div>
+</section>
 
   <!-- VIDEO -->
   <section class="video-section">
@@ -178,7 +365,7 @@
 
     <div class="video-wrapper">
       <video controls>
-        <source src="Palm Plantation.mp4" type="video/mp4" />
+        <source src="/lv_0_20260126164137.mp4" type="video/mp4" />
         Your browser does not support video.
       </video>
     </div>
@@ -190,11 +377,11 @@
       <h2>Our Investment Structure</h2>
       <p>
      One Unit. Real Land. Real Production.
-
+<br>
     1 Unit
-    → 30 Palm Plots
-    → ₦5,000,000 Initial Deposit
-
+    <br>
+    → 30 Plots
+    <br>
     Each unit is carefully allocated, cultivated, and managed within SpringsFarmng’s palm oil production ecosystem.
 
     This model allows participation in agriculture without the complexity of day-to-day farming operations.
@@ -205,9 +392,21 @@
   </section>
 
   <!-- DESIGN -->
+   <section class="benefits-section" style="color: white; background-color: green;">
+  <h2>What You Will Get From Your 30 Plots</h2>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">Affordable Land Ownership with Documentation</div>
+    <div class="benefit-card">Land Cultivated with Oil Palm Trees</div>
+    <div class="benefit-card">Managed by Professionals</div>
+    <div class="benefit-card">Quarterly ROI Paid to Investors</div>
+    <div class="benefit-card">Passive Income for Over 30 Years</div>
+    <div class="benefit-card">Farm Maintenance Fully Covered</div>
+    <div class="benefit-card highlight">Zero Stress on You</div>
+  </div>
+</section>
   <section>
     <div class="design-box">
-      <h2>Our Approach, Visually</h2>
       <img src="menu.jpg" alt="SpringsFarmng design" />
       <p>
         A visual interpretation of our agricultural and investment philosophy.
@@ -216,8 +415,8 @@
   </section>
 
   <!-- TRUST -->
-  <section class="trust">
-    <h2>What Makes SpringsFarmng Different</h2>
+  <section class="trust" style="background-color: black;">
+    <h2 style="color: white;">What Makes SpringsFarmng Different</h2>
 
     <ul>
       <li>Focused on real agricultural assets</li>
@@ -231,3 +430,14 @@
  
 </body>
 </html>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, 6000); // change every 6 seconds
+</script>
