@@ -38,6 +38,56 @@
   </div>-->
 </div>
 
+<style>
+.image-flow {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.image-track {
+    display: inline-flex;
+    gap: 20px;
+    animation: flow 15s linear infinite;
+}
+
+.image-track img {
+    width: 250px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes flow {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="image-flow">
+    <div class="image-track">
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+
+        <!-- Duplicate images for smooth looping -->
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+        <img src="soma.jpg">
+    </div>
+</div>
+
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -327,9 +377,9 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- GOOGLE MAP -->
 <div style="width:100%; max-width:100%;">
   <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63595.91755305449!2d6.269991987911028!3d4.982009627554048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106a01a8ef311659%3A0x1babfaddabe3f24a!2sAgudama%20Epie%20Market!5e0!3m2!1sen!2sng!4v1766014450862!5m2!1sen!2sng"
-    style="width:100%; height:300px; border:0;"
-    loading="lazy">
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3252218053644!2d5.754106600000001!3d5.518662099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041b296841fd74f%3A0x67e01da2f0f3e576!2sOmetan%20St%2C%20Warri%2C%20332104%2C%20Delta!5e0!3m2!1sen!2sng!4v1789577299988!5m2!1sen!2sng"
+    width="310" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    
   </iframe>
 </div>
 
