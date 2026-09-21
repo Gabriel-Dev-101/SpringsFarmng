@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+/* HEADER */
+.header {
+  background: #0f7a2e;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+/* LAYOUT */
+.dashboard {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #1c1c1c;
+  color: #ddd;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.sidebar a:hover {
+  color: #fff;
+}
+
+/* MAIN */
+.main {
+  padding: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f7a2e;
+}
+
+/* CHARTS */
+.charts {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* PLANS */
+.plans {
+  margin-top: px;
+}
+
+.plan {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.plan h4 {
+  margin: 0;
+}
+
+.plan span {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  background: #0f7a2e;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* HEADER */
+.plans-header {
+  background: #0f7a2e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.plans-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.plans-header p {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* CONTAINER */
+.plans-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* GRID */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* PLAN CARD */
+.plan-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.plan-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f7a2e;
+}
+
+.plan-price {
+  font-size: 26px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.plan-roi {
+  background: #e8f5ec;
+  color: #0f7a2e;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.plan-features {
+  margin: 20px 0;
+  flex: 1;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.plan-features li::before {
+  content: "✔";
+  color: #0f7a2e;
+  margin-right: 8px;
+}
+
+.plan-btn {
+  padding: 12px;
+  background: #0f7a2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.plan-btn:hover {
+  background: #0c6325;
+}
+
+/* HIGHLIGHT PLAN */
+.featured {
+  border: 2px solid #0f7a2e;
+}
+
+/* FOOT NOTE */
+.note {
+  text-align: center;
+  margin-top: 40px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .plans-header h1 {
+    font-size: 22px;
+  }
+}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+/* HEADER */
+.dashboard-header {
+  background: #0f7a2e;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* LAYOUT */
+.dashboard {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #1b1b1b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.sidebar a:hover {
+  color: #fff;
+}
+
+/* MAIN */
+.main {
+  padding: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.card p {
+  font-size: 22px;
+  margin: 10px 0 0;
+  font-weight: bold;
+  color: #0f7a2e;
+}
+
+/* PROJECTS */
+.projects {
+  margin-top: 30px;
+}
+
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.progress {
+  background: #eee;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #0f7a2e;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.chart-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  height: 320px; /* IMPORTANT */
+}
+
+@media (max-width: 600px) {
+  .chart-box {
+    height: 260px;
+  }
+} 
+</style>
+
+</head>
+<body>
+<h1 style="text-align: center;"> CLUSTER INVESTMENT </h1>
+<!-- PLANS -->
+<div class="plans-container">
+  <div class="plans-grid">
+
+    <!-- GOLD CLUSTER -->
+    <div class="plan-card">
+      <div class="plan-title">Gold Cluster</div>
+      <div class="plan-price">₦100,000 <br> <div style="font-size: large;">Per Participant </div> </div>
+      <div class="plan-roi"> 10 Participants <br> Total Cluster Value: ₦1,000,000 </div>
+
+      <ul class="plan-features">
+        <li>1 Plot of Land</li>
+        <li>10 Oil Palm Trees</li>
+        <li>Verified Documents</li>
+        <li>Professional Farm Management</li>
+      </ul>
+
+      <a href="contact-form.html"><button class="plan-btn" onclick="selectPlan('Growth Plan')">
+        Invest Now
+      </button></a>
+    </div>
+
+    <!-- SILVER PLAN -->
+     <div class="plan-card featured">
+    <div class="plan-title">Silver Cluster</div>
+      <div class="plan-price">₦1,000,000 <div style="font-size: large;">Per Participant </div> </div>
+      <div class="plan-roi">  6 Participants <br> Total Cluster Value: ₦6,000,000 </div>
+
+      <ul class="plan-features">
+        <li>6 Plot of Land</li>
+        <li>60 Oil Palm Trees</li>
+        <li>Verified Documents</li>
+        <li>Professional Farm Management</li>
+
+       <a href="contact-form.html"><button class="plan-btn" onclick="selectPlan('Growth Plan')">
+        Invest Now
+      </button></a>
+    </div>
+
+
+<!-- PLANTINUM PLAN -->
+ <div class="plan-card">
+    <div class="plan-title"> Plantinum Cluster</div>
+      <div class="plan-price">₦7,000,000 <div style="font-size: large;">Per Participant </div> </div>
+      <div class="plan-roi">  2 Participants <br> Total Cluster Value: ₦14,000,000 </div>
+
+      <ul class="plan-features">
+        <li>15 Plot of Land</li>
+        <li>150 Oil Palm Trees</li>
+        <li>Verified Documents</li>
+        <li>Professional Farm Management</li>
+      </ul>
+
+       <a href="contact-form.html"><button class="plan-btn" onclick="selectPlan('Growth Plan')">
+        Invest Now
+      </button></a>
+    </div>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h1 style="text-align: center;">  Virtual Representation </h1>
+<center><img src="/cluster.jpg" width="320px" height="auto"></center>
+</body>
+</html>
